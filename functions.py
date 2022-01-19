@@ -1,3 +1,4 @@
+
 # current position
 position = 0
 
