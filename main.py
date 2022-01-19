@@ -1,24 +1,15 @@
-# current position
-position = 0
-
-# implement function for increasing player position
-def move_player():
-    global position # access the variable outside the function
-    position += 1
-    print(position)
+class GameObject:
     
-# call the function
-move_player()
+    # the initializer function
+    def __init__(self, name, x_pos, y_pos):
+        self.name = name
+        self.x_pos = x_pos
+        self.y_pos = y_pos
 
-position = 0
-
-# implement function to take in a parameters
-def move_player(position, by_amount):
-    position += by_amount
-    # produce an output from the function
-    return position
-   
-# pass values to the function 
-position = move_player(position, 5)
-position = move_player(position, 2)
-print(position)
+# create a new game object
+game_object = GameObject("Enemy", 1, 2)
+# access the properties of the game object
+print(game_object.name)
+# change game object properties to new values
+game_object.name = "Enemy 1"
+print(game_object.name)
